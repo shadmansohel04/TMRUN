@@ -1,0 +1,193 @@
+.contactBody{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.contactBody h1{
+    font-size: 9rem;
+    width: 40%;
+}
+
+.contactForm{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm h2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 4%;
+}
+
+.contactForm input {
+    color: white;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-right: 2%;
+    margin-bottom: 4%;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    border-bottom: solid white 2px;
+    width: 100%;
+}
+
+.contactForm input::placeholder{
+    color: white;
+    font-size: 1rem;
+}
+
+.contactForm textarea{
+    background: transparent;
+    border: solid white 2px;
+    padding-left: 2%;
+    width: 100%;
+    resize: none;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.contactForm textarea::placeholder{
+    color: white;
+}
+
+
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  font-weight: 500;
+  min-height: 3rem;
+  padding-left: 2%;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 70%;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+@media (max-width: 768px){
+  
+  .contactBody{
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.contactBody h1{
+    font-size: 5rem;
+    width: 80%;
+    margin-bottom: 10%;
+}
+
+.contactForm{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm h2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 4%;
+}
+
+.contactForm input {
+    color: white;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-right: 2%;
+    margin-bottom: 4%;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    border-bottom: solid white 2px;
+    width: 100%;
+}
+
+.contactForm input::placeholder{
+    color: white;
+    font-size: 1rem;
+}
+
+.contactForm textarea{
+    background: transparent;
+    border: solid white 2px;
+    padding-left: 2%;
+    width: 100%;
+    resize: none;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.contactForm textarea::placeholder{
+    color: white;
+}
+
+
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  font-weight: 500;
+  min-height: 3rem;
+  padding-left: 2%;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 50%;
+  text-align: left;
+  font-size: 1.2rem;
+  }
+
+
+}

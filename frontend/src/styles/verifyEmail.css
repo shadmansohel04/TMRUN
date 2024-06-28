@@ -1,0 +1,12 @@
+.checkemailblock{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkemailblock h1{
+    width: 50%;
+    align-self: center;
+    font-size: 4rem;
+    margin-bottom: 3%;
+}

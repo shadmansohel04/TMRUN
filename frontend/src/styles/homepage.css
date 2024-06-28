@@ -1,0 +1,128 @@
+.homePage{
+    display: flex;
+    padding-bottom: 7%;
+    padding-top: 7%;
+    color: white;
+    margin: 0;
+}
+
+.leftHome{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+}
+
+.leftHome button{
+    padding: 10%;
+    font-size: 1rem;
+}
+
+.button-19 {
+    background-color: rgb(232,188,68);
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 20px;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    align-self:flex-end;
+  }
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: rgb(202, 164, 61);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+.rightHome{
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.rightHome h1{
+    font-size: 5rem;
+}
+
+@media (max-width: 512px) {
+  .homePage{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 10%;
+  }
+
+  .leftHome{
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    align-self: center;
+    order: 1;
+  }
+
+  .rightHome{
+    order: 0;
+    align-self: center;
+    justify-self: flex-start;
+    text-align: left;
+    margin: 0;
+  }
+
+  .rightHome h1{
+    padding: 10%;
+    font-size: 4rem;
+    text-align: left;
+  }
+
+  .rightHome h4{
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 10%;
+  }
+
+
+  .button-19{
+    margin: 0;
+    order: 1;
+    width: 100%;
+  }
+
+
+}

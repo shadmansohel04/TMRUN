@@ -1,0 +1,200 @@
+.allScoreBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-weight: 100;
+  background-image: url('/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#TitlesInScores{
+  font-size: 5rem;
+  margin-bottom: 3%;
+  text-align: left;
+  width: fit-content;
+}
+
+.allScoreContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.horizontalScores{
+    display: flex;
+    width: 95%;
+    align-self: center;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+.EachScore{
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+    background-color: transparent;
+    padding: 2%;
+    background-color: rgb(0, 0, 0, 0.2);
+    border: solid 5px white;
+    border-radius: 10px;
+}
+
+.EachScore h2{
+    margin-bottom: 5%;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.EachScore h4{
+    margin-bottom: 3%;
+    font-size: 4rem;
+}
+
+
+.button-86 {
+    all: unset;
+    width: 50%;
+    align-self: center;
+    height: 60px;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+@media (max-width: 768px){
+  
+  .allScoreBody{
+    padding: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .allScoreContainer{
+    width: 80%;
+  }
+
+  .horizontalScores{
+    display: flex;
+    width: 90%;
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .EachScore{
+    width: 100%;
+    margin-bottom: 20%;
+    padding: 4%;
+  }
+
+  #TitlesInScores{
+    font-size: 3rem;
+    margin-bottom: 10%;
+    width: fit-content;
+    text-align: left;
+  }
+
+  .EachScore h2{
+    margin-bottom: 5%;
+    font-weight: 100;
+    font-size: 1.5rem;
+  }
+
+  .EachScore h4{
+      margin-bottom: 3%;
+      font-size: 4rem;
+  }
+
+  .button-86 {
+    all: unset;
+    width: 50%;
+    align-self: center;
+    height: 60px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    margin-bottom: 10%;
+  }
+
+
+}

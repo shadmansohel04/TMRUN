@@ -1,0 +1,64 @@
+.aboutBody{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.motivationBlurb{
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftMotivationBlurb{
+    width: 45%;
+    text-align: left;
+}
+
+.aboutTitle{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.leftMotivationBlurb p{
+    margin-top: 5%;
+    font-size: 1.1rem;
+    font-weight: 100;
+    width: 100%;
+    line-height: 1.5rem;
+}
+
+.stravaLogo{
+    width: 40%;
+    height: fit-content;
+}
+
+.topMargin{
+    margin-top: 5%;
+}
+
+.dunnowhyitdont{
+    margin-top: -5%;
+}
+
+@media (max-width: 768px) {
+    .motivationBlurb{
+        flex-direction: column;
+    }
+
+    .leftMotivationBlurb{
+        width: 100%;
+    }
+
+    .aboutTitle{
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    .stravaLogo{
+        align-self: center;
+        width: 60%;
+    }
+}

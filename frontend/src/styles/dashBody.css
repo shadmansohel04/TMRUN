@@ -1,0 +1,213 @@
+.LOADING{
+    width: 100%;
+    height: 100vh;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 10%;
+}
+
+.userDashBody{
+    display: flex;
+    padding: 5%;
+    color: white;
+}
+
+.leftUserDash{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 5%;
+    align-items: center;
+}
+
+.leftUserDash h1{
+    font-size: 4rem;
+    margin-bottom: 20%;
+}
+
+#buttonForUserDash{
+    width: 50%;
+    margin: 0%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.rightUserDash{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rightUserDash h2{
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 5%;
+}
+
+.EachUserleaderboard{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.circlePerson{
+    color: white;
+    border: solid white 5px;
+    width: 110px;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    margin-bottom: 3%;
+    background-color:black;
+}
+
+.circlePerson h3{
+    font-weight: 100;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.circlePerson h4{
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+
+.userBackground{
+    background-image: url('/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button-40 {
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 21%;
+    will-change: transform;
+  }
+  
+  .button-40:disabled {
+    pointer-events: none;
+  }
+  
+  .button-40:hover {
+    background-color: rgb(41, 41, 41);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-40:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px){
+
+    .userDashBody{
+        display: flex;
+        padding: 5%;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftUserDash{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .leftUserDash h1{
+        font-size: 4rem;
+        margin-bottom: 10%;
+    }
+
+    #buttonForUserDash{
+        width: 100%;
+        margin-bottom: 10%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+    .rightUserDash{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .rightUserDash h2{
+        font-size: 3rem;
+        font-weight: 100;
+        margin-bottom: 5%;
+        text-align: left;
+    }
+    
+    .EachUserleaderboard{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .circlePerson{
+        border: solid white;
+        width: 80px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 50%;
+        margin-bottom: 3%;
+        background-color: #1C110A;
+    }
+    
+    .circlePerson h3{
+        font-weight: 100;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+    
+    .circlePerson h4{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+
+
+
+  }

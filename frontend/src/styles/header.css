@@ -1,0 +1,199 @@
+header{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+
+.dropdown{
+  display: none;
+}
+
+
+.leftSide{
+    display: flex;
+    width: 60%;
+    align-items: center;
+}
+
+.rightSide{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+ul{
+    align-items: center;
+    list-style: none;
+    display: flex;
+    width: 100%;
+
+}
+
+li{
+    margin-right: 5%;
+    font-size: 1.25rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.LOGO{
+    font-weight: 800;
+    margin-right: 10%;
+    font-size: 2rem;
+    color: rgb(232,188,68);
+}
+
+.dropper{
+  display: none;
+}
+
+.button-28 {
+  background-color: rgb(43, 40, 40);
+  border: 2px solid rgb(232,188,68);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: rgb(232,188,68);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 21%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: rgb(232,188,68);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.firstlogo{
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  header{
+    margin-bottom: 0;
+    align-items: start;
+    padding: 8%;
+    padding-bottom: 0;
+  }
+
+  .leftSide{
+    align-items: start;
+  }
+
+  .leftSide ul{
+    display: none;
+  }
+
+  .rightSide{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .secondlogo{
+    display: none;
+  }
+
+  .firstlogo{
+    display: flex;
+  }
+
+  .hideThis{
+    display: none;
+  }
+
+  .dropdown{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: end;
+    background-color: black;
+    color: wheat;
+    height: 60vh;
+    justify-content: space-around;
+  }
+
+  .sizing{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: end;
+    background-color: black;
+    color: wheat;
+    height: 10vh;
+    justify-content: space-around;
+  }
+
+
+  .dropper{
+    display: inline;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    text-align: right;
+  }
+
+  .fade-transition {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0; 
+  }
+
+  .fade-transition.hidden {
+      opacity: 1;
+  }
+
+  .keepFit{
+    width: fit-content;
+    background-color: transparent;
+    font-size: 1.7rem;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    color: white;
+    padding-right: 3%;
+    text-align: right;
+    margin: 0;
+  }
+
+  .rightSide li{
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+}

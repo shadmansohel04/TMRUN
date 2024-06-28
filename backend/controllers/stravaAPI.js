@@ -480,7 +480,7 @@ const onLink = async (req, res) => {
         await user.save()
         await stravaData.save()
         await updateStrava(user_id)
-        res.status(200).send(`<h1>Strava connected!</h1>` + `<a href="https://tmrun.onrender.com/login">Login</a>`)
+        res.status(200).send(`<h1>Strava connected!</h1>` + `<a href="https://tmrun-1.onrender.com/login">Login</a>`)
     } catch (error) {
         console.error(error);
         return res.status(500).send({ success: false, error: error.message });

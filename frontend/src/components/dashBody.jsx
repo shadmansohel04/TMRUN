@@ -56,7 +56,7 @@ export default function UserDashBody() {
             setLoading(false);
             setPacer(response.data.scores.pacerScore)
             setImprove(response.data.scores.improve)
-            setTime(response.data.consistencyScore)
+            setTime(response.data.scores.consistencyScore)
         })
         .catch((error) => {
             console.error('Error fetching user data:', error);

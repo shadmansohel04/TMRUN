@@ -7,6 +7,10 @@ import { useNavigate } from "react-router-dom";
 export default function UserDashBody() {
     const navigate = useNavigate();
     const [name, setName] = useState('');
+    const [pacer, setPacer] = useState('')
+    const [improve, setImprove] = useState('')
+    const [time, setTime] = useState('')
+
     const [lastThreeRuns, setRuns] = useState([
         {
             time: "awkward...",
@@ -50,6 +54,9 @@ export default function UserDashBody() {
               
             setRuns(newStrava)
             setLoading(false);
+            setPacer(response.data.scores.pacerScore)
+            setImprove(response.data.scores.improve)
+            setTime(response.data.consistencyScore)
         })
         .catch((error) => {
             console.error('Error fetching user data:', error);
@@ -74,16 +81,16 @@ export default function UserDashBody() {
         return (
             <div className="EachUserleaderboard">
                 <div className="circlePerson">
+                    <h3>Pacer</h3>
+                    <h4>{pacer}</h4>
+                </div>
+                <div className="circlePerson">
                     <h3>Consistency</h3>
-                    <h4>86</h4>
+                    <h4>{time}</h4>
                 </div>
                 <div className="circlePerson">
-                    <h3>Final Push</h3>
-                    <h4>55</h4>
-                </div>
-                <div className="circlePerson">
-                    <h3>Early Bird</h3>
-                    <h4>78</h4>
+                    <h3>Improver</h3>
+                    <h4>{improve}</h4>
                 </div>
             </div>
         );

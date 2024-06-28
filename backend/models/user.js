@@ -41,7 +41,7 @@ userSchema.pre('save', async function(next){
         process.env.JWT_SECRET, 
         {expiresIn:'1d'}
     )
-    const url = `http://localhost:3000/home/confirmation/${emailToken}`
+    const url = `https://tmrun.onrender.com/home/confirmation/${emailToken}`
 
     transporter.sendMail({
         from: 'shadman2354@gmail.com',

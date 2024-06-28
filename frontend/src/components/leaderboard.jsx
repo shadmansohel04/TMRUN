@@ -85,7 +85,7 @@ export default function EachLeaderboard() {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/userdash/leader`, {
+        axios.get(`https://tmrun.onrender.com/userdash/leader`, {
             headers: {
                 Authorization: localStorage.getItem('token')
             }

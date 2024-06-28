@@ -14,7 +14,7 @@ export default function signUpSquare(){
     const [errormsg, setMsg] = useState('')
 
     function signUp(){
-        axios.post('http://localhost:3000/home/sign_up',{
+        axios.post('https://tmrun.onrender.com/home/sign_up',{
             username,
             password,
             email

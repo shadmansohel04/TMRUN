@@ -30,7 +30,7 @@ export default function UserDashBody() {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/userdash/home/${userId}`, {
+        axios.get(`https://tmrun.onrender.com/userdash/home/${userId}`, {
             headers: {
                 Authorization: localStorage.getItem('token')
             }

@@ -54,7 +54,7 @@ export default function(){
     }, [])
 
     function switchLeader(){
-        axios.post("http://localhost:3000/userdash/home/switchLeader", 
+        axios.post("https://tmrun.onrender.com/userdash/home/switchLeader", 
             {
                 userId: userId,
                 newLeader: showSwitch

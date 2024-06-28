@@ -14,7 +14,7 @@ export default function LoginSquare(){
     const [errormsg, setMsg] = useState('')
 
     function login(){
-        axios.post('http://localhost:3000/home/login', {
+        axios.post('https://tmrun.onrender.com/home/login', {
             email: email,
             password: password
         }).then((response)=>{

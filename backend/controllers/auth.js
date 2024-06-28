@@ -14,22 +14,26 @@ async function encryptPassword(password){
     }
 }
 
-const confirmEmail = async (req, res) =>{
+const confirmEmail = async (req, res) => {
     try {
-        const userId = await jwt.verify(req.params.token, process.env.JWT_SECRET).userId
-        const user =  await User.findOne({_id: userId})
-        if(!user){
-            throw CustomAPIError(400, 'unable to confirm person')   
+        const userId = await jwt.verify(req.params.token, process.env.JWT_SECRET).userId;
+        const user = await User.findOne({ _id: userId });
+        if (!user) {
+            throw new CustomAPIError(400, 'unable to confirm person');
         }
-        user.authorized = true
-        await user.save()
-        const NEWURL = `https://www.strava.com/oauth/authorize?client_id=128690&redirect_uri=https://tmrun.onrender.com/home/STRAVALINK?user_id%3D${userId}&response_type=code&scope=activity:read_all`
+        user.authorized = true;
+        await user.save();
+        
+        const redirectUri = encodeURIComponent(`https://tmrun.onrender.com/home/STRAVALINK?user_id=${userId}`);
+        const NEWURL = `https://www.strava.com/oauth/authorize?client_id=128690&redirect_uri=${redirectUri}&response_type=code&scope=activity:read_all`;
 
-        return res.status(200).send(`<h1>CONFIRMED EMAIL</h1>` + `<a href="${NEWURL}">Connect Strava</a>`)
+        return res.status(200).send(`<h1>CONFIRMED EMAIL</h1><a href="${NEWURL}">Connect Strava</a>`);
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).send('An error occurred');
     }
 }
+
 
 const signUp = async (req, res) => {
     const {username, password, email} = req.body;

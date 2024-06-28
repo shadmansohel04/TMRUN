@@ -358,7 +358,11 @@ const getRecentRuns = async(userID) =>{
                 })
             }
         })
-        return data
+
+        const scores = stravaData.scores
+
+        return {data, scores}
+        
     } catch (error) {
         console.log(error)
     }

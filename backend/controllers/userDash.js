@@ -39,7 +39,7 @@ const getUserInfo = async (req, res)=>{
         const userId = req.params.id   
         const stravaData = await getRecentRuns(userId)
         const user = await User.findById({_id: userId})
-        return res.status(200).send({success: true, user: user.username, data: stravaData})
+        return res.status(200).send({success: true, user: user.username, data: stravaData.data, scores: stravaData.scores})
     } catch (error) {
         return res.status(200).send({success: false, msg: "need to login"})
     }

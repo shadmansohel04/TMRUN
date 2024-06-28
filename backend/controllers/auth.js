@@ -23,7 +23,7 @@ const confirmEmail = async (req, res) =>{
         }
         user.authorized = true
         await user.save()
-        const NEWURL = `https://www.strava.com/oauth/authorize?client_id=128690&redirect_uri=http://localhost:3000/home/STRAVALINK?user_id%3D${userId}&response_type=code&scope=activity:read_all`
+        const NEWURL = `https://www.strava.com/oauth/authorize?client_id=128690&redirect_uri=https://tmrun.onrender.com/home/STRAVALINK?user_id%3D${userId}&response_type=code&scope=activity:read_all`
 
         return res.status(200).send(`<h1>CONFIRMED EMAIL</h1>` + `<a href="${NEWURL}">Connect Strava</a>`)
     } catch (error) {

@@ -22,7 +22,7 @@ export default function(){
     const [calories, setCalories] = useState('')
 
     useEffect(()=>{
-        axios.get(`http://localhost:3000/userdash/home/${userId}/scores`, {
+        axios.get(`https://tmrun.onrender.com/userdash/home/${userId}/scores`, {
             headers:{
                 Authorization: localStorage.getItem('token')
             }

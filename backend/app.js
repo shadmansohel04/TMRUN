@@ -13,7 +13,7 @@ const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
 app.use(cors({
-  origin:"http://localhost:5173"
+  origin:"https://tmrun-1.onrender.com/login"
 }))
 
 app.use(express.json())

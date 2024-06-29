@@ -34,7 +34,7 @@ export default function aboutBody(){
                 </div>
                 <img src={leaderboard} alt="time/calender" className='stravaLogo dunnowhyitdont'/>
             </div>
-            <img src={powered.png} className='powered' alt="powered by strava" />
+            <img src={powered} className='powered' alt="powered by strava" />
         </div>
     )
 }

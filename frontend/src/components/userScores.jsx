@@ -7,12 +7,12 @@ export default function(){
     const {userId} = useParams('userId')
     const [highRiser, setHighRiser] = useState('')
     const [consistencyScore, setConsistencyScore] = useState('')
-    const [am_or_pm, setAMPM] = useState('')
+    const [am_or_pm, setAMPM] = useState('AM Or PM')
     const [amPMScore, setAMPMScore] = useState('')
-    const [earlyOrlatePusher, setPusher] = useState('')
+    const [earlyOrlatePusher, setPusher] = useState('Pusher')
     const [earlyOrlatePusherScore, setPusherScore] = useState('')
     const [pacerScore, setPacerScore] = useState('')
-    const [showSwitch, setShowSwitch]= useState('')
+    const [showSwitch, setShowSwitch]= useState('Leaderboard Unavailable')
     const [momentumScore, setMomentum] = useState('')
     const [time2k, set2k] = useState('')
     const [time5k, set5k] = useState('')
@@ -27,6 +27,9 @@ export default function(){
                 Authorization: localStorage.getItem('token')
             }
         }).then((response) =>{
+            if(response.data.success == false){
+                return
+            }
             setHighRiser(response.data.elevationScore)
             setConsistencyScore(response.data.consistencyScore)
             if(response.data.AM_PM_score.time == "PM"){

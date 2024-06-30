@@ -25,7 +25,7 @@ const mealBurn = async (userID)=>{
 
 
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -54,7 +54,7 @@ const improver = async (userID) =>{
         return (((recentPace - FirstRun)/ FirstRun)*100).toFixed(1)
 
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -78,7 +78,7 @@ const momentum = async (userID) =>{
 
         return sum.toFixed(1)
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -113,7 +113,7 @@ const pacer = async (userID) =>{
         return sum.toFixed(1)
 
     } catch (error) {  
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -181,7 +181,7 @@ const timePusher = async (userID) =>{
         return score
 
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -208,7 +208,7 @@ const getAMorPMscore = async (userID) =>{
         return 0
 
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -237,7 +237,7 @@ const getlastThreeRunsData = async (userID, accessToken) =>{
         userData.lastThreeRuns = lastRuns
         userData.save()
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -261,7 +261,7 @@ const highClimber = async (userID) =>{
         return avgElevation
         
     } catch (error) {
-        
+        res.status(404).send({success:false})
     }
 }
 
@@ -301,7 +301,7 @@ const CaptainConsistency = async (userID) =>{
         return numberOfRuns
 
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -319,7 +319,7 @@ const getAccessToken = async (userID) =>{
         })
         return response.data.access_token
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -370,7 +370,7 @@ const getRecentRuns = async(userID) =>{
         return {data, scores}
         
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 
@@ -410,7 +410,7 @@ const getAllScores = async (req, res) =>{
         )
    
     } catch (error) {
-        console.log(error)   
+        res.status(404).send({success:false})
     }
 }
 
@@ -460,7 +460,7 @@ const updateScores = async(id)=>{
         stravaPerson.save()
 
     } catch (error) {
-        console.log(error)
+        res.status(404).send({success:false})
     }
 }
 

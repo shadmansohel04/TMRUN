@@ -109,11 +109,13 @@ const getRegularScores = async (userID)=>{
         const time2k = await time_2k(userID)
         const time5k = await time_5k(userID)
         const time10k = await time_10k(userID)
+        const time20k = await time_20k(userID)
         
         return({
             time2k: time2k,
             time5k: time5k,
-            time10k: time10k
+            time10k: time10k,
+            time20k: time20k
         })
 
     } catch (error) {

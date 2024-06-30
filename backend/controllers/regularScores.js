@@ -7,7 +7,7 @@ const time_20k = async (userID)=>{
         
         alldata = alldata.filter(each => each.type == 'Run' && each.distance >= 20000)
         alldata = alldata.map((each)=>{
-            return each.average_speed
+            return (1/each.average_speed*16.66667)
         })
 
         let sum = 0
@@ -33,7 +33,7 @@ const time_10k = async (userID)=>{
         
         alldata = alldata.filter(each => each.type == 'Run' && each.distance >= 10000 && each.distance < 20000)
         alldata = alldata.map((each)=>{
-            return each.average_speed
+            return (1/each.average_speed*16.66667)
         })
 
         let sum = 0
@@ -59,7 +59,7 @@ const time_5k = async (userID)=>{
         
         alldata = alldata.filter(each => each.type == 'Run' && each.distance >= 5000 && each.distance < 10000)
         alldata = alldata.map((each)=>{
-            return each.average_speed
+            return (1/each.average_speed*16.66667)
         })
 
         let sum = 0
@@ -85,7 +85,7 @@ const time_2k = async (userID)=>{
         
         alldata = alldata.filter(each => each.type == 'Run' && each.distance >= 2000 && each.distance < 5000)
         alldata = alldata.map((each)=>{
-            return each.average_speed
+            return (1/each.average_speed*16.66667)
         })
 
         let sum = 0

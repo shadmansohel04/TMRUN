@@ -255,7 +255,9 @@ const highClimber = async (userID) =>{
             }
         })
 
-        const avgElevation = totalElevation/ alldata.length
+        let avgElevation = totalElevation/ alldata.length
+        avgElevation = avgElevation.toFixed(1)
+
         return avgElevation
         
     } catch (error) {

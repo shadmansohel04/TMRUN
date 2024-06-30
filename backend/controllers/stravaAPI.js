@@ -25,7 +25,7 @@ const mealBurn = async (userID)=>{
 
 
     } catch (error) {
-        res.status(404).send({success:false})
+        throw error
     }
 }
 
@@ -54,7 +54,7 @@ const improver = async (userID) =>{
         return (((recentPace - FirstRun)/ FirstRun)*100).toFixed(1)
 
     } catch (error) {
-        res.status(404).send({success:false})
+        throw error
     }
 }
 
@@ -78,7 +78,7 @@ const momentum = async (userID) =>{
 
         return sum.toFixed(1)
     } catch (error) {
-        res.status(404).send({success:false})
+        throw error
     }
 }
 

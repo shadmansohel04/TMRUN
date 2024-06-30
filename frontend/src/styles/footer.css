@@ -9,6 +9,16 @@ footer{
     background-color: black;
 }
 
+.leftFOOT{
+    justify-content: left;
+}
+
+.powered{
+    width: 20%;
+    height: fit-content;
+    margin-left: 3%;
+}
+
 .shadmanSohel{
     color: rgb(232,188,68);
 }

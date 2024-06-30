@@ -43,10 +43,6 @@
     margin-top: -5%;
 }
 
-.powered{
-    width: 20%;
-    height: fit-content;
-}
 
 @media (max-width: 768px) {
     .motivationBlurb{

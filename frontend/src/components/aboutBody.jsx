@@ -1,7 +1,6 @@
 import '../styles/aboutBody.css'
 import stravaLogo from '../assets/stravaLogo.webp'
 import leaderboard from '../assets/leaderboard.png'
-import powered from '../assets/powered.png'
 
 export default function aboutBody(){
     return(
@@ -34,7 +33,6 @@ export default function aboutBody(){
                 </div>
                 <img src={leaderboard} alt="time/calender" className='stravaLogo dunnowhyitdont'/>
             </div>
-            <img src={powered} className='powered' alt="powered by strava" />
         </div>
     )
 }

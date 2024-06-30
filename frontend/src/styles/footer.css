@@ -18,7 +18,7 @@ footer{
     width: 30%;
     height: fit-content;
     margin-left: 3%;
-    align-items: baseline;
+    align-items: flex-end;
 }
 
 .shadmanSohel{

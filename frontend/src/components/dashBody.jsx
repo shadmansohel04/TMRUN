@@ -60,7 +60,7 @@ export default function UserDashBody() {
         })
         .catch((error) => {
             console.error('Error fetching user data:', error);
-            setLoading(false); // stop loading even if there is an error
+            setLoading(false);
         });
     }, []);
 

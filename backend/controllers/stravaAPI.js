@@ -293,7 +293,11 @@ const CaptainConsistency = async (userID) =>{
                 numberOfRuns += 1
             }
         })
-        return numberOfRuns*3.3.toFixed(1) 
+        
+        numberOfRuns = (numberOfRuns*3.3).toFixed(1)
+
+        return numberOfRuns
+
     } catch (error) {
         console.log(error)
     }

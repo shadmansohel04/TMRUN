@@ -25,7 +25,7 @@ const switchLeader = async (req, res)=>{
 
         return res.status(200).send({success: true, newLeader: msg})
     } catch (error) {
-        console.log(error)
+        return res.status(400).send({success: false, msg: error})
     }
 }
 

@@ -1,5 +1,31 @@
 const Strava = require('../models/stravaData')
 
+const time_20k = async (userID)=>{
+    try {
+        const stravaData = await Strava.findOne({person: userID})
+        let alldata = stravaData.recentRuns
+        
+        alldata = alldata.filter(each => each.type == 'Run' && each.distance >= 20000)
+        alldata = alldata.map((each)=>{
+            return each.average_speed
+        })
+
+        let sum = 0
+        alldata.map((each)=>{
+            sum+= each
+        })
+
+        if (sum == 0){
+            return NaN
+        }
+        
+        return parseFloat((sum/alldata.length).toFixed(1))
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 const time_10k = async (userID)=>{
     try {
         const stravaData = await Strava.findOne({person: userID})
@@ -16,7 +42,7 @@ const time_10k = async (userID)=>{
         })
 
         if (sum == 0){
-            throw error
+            return NaN
         }
         
         return parseFloat((sum/alldata.length).toFixed(1))
@@ -31,16 +57,20 @@ const time_5k = async (userID)=>{
         const stravaData = await Strava.findOne({person: userID})
         let alldata = stravaData.recentRuns
         
+        alldata = alldata.filter(each => each.type == 'Run' && each.distance >= 5000 && each.distance < 10000)
         alldata = alldata.map((each)=>{
-            if(each.type == "Run" && each.distance >= 5000 && each.distance < 10000){
-                return (1/each.average_speed)*16.66667
-            }
+            return each.average_speed
         })
+
         let sum = 0
         alldata.map((each)=>{
             sum+= each
         })
 
+        if (sum == 0){
+            throw NaN
+        }
+        
         return parseFloat((sum/alldata.length).toFixed(1))
 
     } catch (error) {
@@ -64,7 +94,7 @@ const time_2k = async (userID)=>{
         })
 
         if (sum == 0){
-            throw error
+            throw NaN
         }
         
         return parseFloat((sum/alldata.length).toFixed(1))

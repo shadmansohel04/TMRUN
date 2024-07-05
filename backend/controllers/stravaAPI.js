@@ -301,8 +301,8 @@ const CaptainConsistency = async (userID) =>{
         return numberOfRuns
 
     } catch (error) {
-        res.status(404).send({success:false})
-    }
+        console.log("consistent failed")
+        throw new Error ('an error occured')    }
 }
 
 const getAccessToken = async (userID) =>{
@@ -319,8 +319,8 @@ const getAccessToken = async (userID) =>{
         })
         return response.data.access_token
     } catch (error) {
-        res.status(404).send({success:false})
-    }
+        console.log("get token failed")
+        throw new Error ('an error occured')    }
 }
 
 const updateStrava = async (userID)=>{
@@ -370,8 +370,8 @@ const getRecentRuns = async(userID) =>{
         return {data, scores}
         
     } catch (error) {
-        res.status(404).send({success:false})
-    }
+        console.log("recent failed")
+        throw new Error ('an error occured')    }
 }
 
 const getAllScores = async (req, res) =>{
@@ -410,8 +410,8 @@ const getAllScores = async (req, res) =>{
         )
    
     } catch (error) {
-        res.status(404).send({success:false})
-    }
+        console.log("get failed")
+        throw new Error ('an error occured')    }
 }
 
 const updateScores = async(id)=>{
@@ -460,7 +460,8 @@ const updateScores = async(id)=>{
         stravaPerson.save()
 
     } catch (error) {
-        res.status(404).send({success:false})
+        console.log("update failed")
+        throw new Error ('an error occured')
     }
 }
 
@@ -486,7 +487,7 @@ const onLink = async (req, res) => {
         await user.save()
         await stravaData.save()
         await updateStrava(user_id)
-        res.status(200).send(`<h1>Strava connected!</h1>` + `<a href="https://tmrun-1.onrender.com/login">Login</a>`)
+        return res.status(200).send(`<h1>Strava connected!</h1>` + `<a href="https://tmrun-1.onrender.com/login">Login</a>`)
     } catch (error) {
         console.error(error);
         return res.status(500).send({ success: false, error: error.message });

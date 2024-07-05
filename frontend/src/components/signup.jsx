@@ -30,14 +30,6 @@ export default function signUpSquare(){
         })
     }
 
-    function handleKey(){
-        const handleKeyDown = (event)=>{
-            if(event.key == 'Enter'){
-                login()
-            }
-        }
-    }
-
     return(
         <div className="signUpSquare">
             <h1>Sign Up</h1>
@@ -51,7 +43,7 @@ export default function signUpSquare(){
 
             <label htmlFor="password">Password</label>
           
-            <input onKeyDown={handleKey} value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Create a Password"/>
+            <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Create a Password"/>
                       
             <button onClick={signUp} className='button-28'>Create Account</button>
 

@@ -334,25 +334,20 @@ const updateStrava = async (userID)=>{
             }
         })
 
-        console.log(response.data)
-
         const weightResponse = await axios.get("https://www.strava.com/api/v3/athlete",{
             params:{
                 access_token: access_token
             }
         })
 
-        console.log(weightResponse.data)
 
         let weight = weightResponse.data.weight
         const stravaData = await Strava.findOne({person: userID})
-        console.log("foudn data")
         stravaData.recentRuns = response.data
         stravaData.weight = weight
-        await getlastThreeRunsData(userID, access_token)
-        console.log("getlastthree worked")
-        await updateScores(userID)
         await stravaData.save()
+        await getlastThreeRunsData(userID, access_token)
+        await updateScores(userID)
         return
     } catch (error) {
         throw new Error (error)    

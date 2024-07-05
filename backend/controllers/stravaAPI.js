@@ -25,7 +25,7 @@ const mealBurn = async (userID)=>{
 
 
     } catch (error) {
-        throw error
+        throw new Error (error)    
     }
 }
 
@@ -54,7 +54,7 @@ const improver = async (userID) =>{
         return (((recentPace - FirstRun)/ FirstRun)*100).toFixed(1)
 
     } catch (error) {
-        throw error
+        throw new Error (error)    
     }
 }
 
@@ -78,7 +78,7 @@ const momentum = async (userID) =>{
 
         return sum.toFixed(1)
     } catch (error) {
-        throw error
+        throw new Error (error)    
     }
 }
 
@@ -113,7 +113,7 @@ const pacer = async (userID) =>{
         return sum.toFixed(1)
 
     } catch (error) {  
-        res.status(404).send({success:false})
+        throw new Error (error)    
     }
 }
 
@@ -181,7 +181,7 @@ const timePusher = async (userID) =>{
         return score
 
     } catch (error) {
-        res.status(404).send({success:false})
+        throw new Error (error)    
     }
 }
 
@@ -208,7 +208,7 @@ const getAMorPMscore = async (userID) =>{
         return 0
 
     } catch (error) {
-        res.status(404).send({success:false})
+        throw new Error (error)    
     }
 }
 
@@ -237,7 +237,7 @@ const getlastThreeRunsData = async (userID, accessToken) =>{
         userData.lastThreeRuns = lastRuns
         userData.save()
     } catch (error) {
-        res.status(404).send({success:false})
+        throw new Error (error)    
     }
 }
 
@@ -261,7 +261,7 @@ const highClimber = async (userID) =>{
         return avgElevation
         
     } catch (error) {
-        res.status(404).send({success:false})
+        throw new Error (error)    
     }
 }
 
@@ -302,7 +302,8 @@ const CaptainConsistency = async (userID) =>{
 
     } catch (error) {
         console.log("consistent failed")
-        throw new Error ('an error occured')    }
+        throw new Error (error)    
+    }
 }
 
 const getAccessToken = async (userID) =>{
@@ -320,7 +321,8 @@ const getAccessToken = async (userID) =>{
         return response.data.access_token
     } catch (error) {
         console.log("get token failed")
-        throw new Error ('an error occured')    }
+        throw new Error (error)    
+    }
 }
 
 const updateStrava = async (userID)=>{
@@ -347,7 +349,7 @@ const updateStrava = async (userID)=>{
         await stravaData.save()
         return
     } catch (error) {
-        console.log(error)
+        throw new Error (error)    
     }
 }
 
@@ -371,7 +373,8 @@ const getRecentRuns = async(userID) =>{
         
     } catch (error) {
         console.log("recent failed")
-        throw new Error ('an error occured')    }
+        throw new Error (error)    
+    }
 }
 
 const getAllScores = async (req, res) =>{
@@ -411,7 +414,8 @@ const getAllScores = async (req, res) =>{
    
     } catch (error) {
         console.log("get failed")
-        throw new Error ('an error occured')    }
+        throw new Error ('an error occured')    
+    }
 }
 
 const updateScores = async(id)=>{
@@ -461,7 +465,7 @@ const updateScores = async(id)=>{
 
     } catch (error) {
         console.log("update failed")
-        throw new Error ('an error occured')
+        throw new Error (error)
     }
 }
 

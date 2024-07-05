@@ -327,13 +327,16 @@ const getAccessToken = async (userID) =>{
 
 const updateStrava = async (userID)=>{
     try {
+        console.log("yyyyy")
         const access_token = await getAccessToken(userID)
+        console.log(access_token)
         const response = await axios.get("https://www.strava.com/api/v3/activities", {
             params:{
                 access_token: access_token
             }
         })
 
+        console.log(response)
         const weightResponse = await axios.get("https://www.strava.com/api/v3/athlete",{
             params:{
                 access_token: access_token
@@ -345,6 +348,7 @@ const updateStrava = async (userID)=>{
         stravaData.recentRuns = response.data
         stravaData.weight = weight
         await getlastThreeRunsData(userID, access_token)
+        console.log("getlastthree worked")
         await updateScores(userID)
         await stravaData.save()
         return
@@ -482,6 +486,7 @@ const onLink = async (req, res) => {
                 Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoYWQiLCJpZCI6MzEsImlhdCI6MTcxNzIwMTk2OCwiZXhwIjoxNzE5NzkzOTY4fQ.yblRS1e8txT_xRHBZjWmhqlFRfBLkatZOrDhjr3dLSc"
             }
         });
+
         const refresh_token = response.data.refresh_token
         const stravaID = response.data.athlete.id
         const user = await User.findOne({_id: user_id})

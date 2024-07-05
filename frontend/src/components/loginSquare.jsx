@@ -30,6 +30,15 @@ export default function LoginSquare(){
         })
     }
 
+    function handleKey(){
+        const handleKeyDown = (event)=>{
+            if(event.key == 'Enter'){
+                login()
+            }
+        }
+    }
+
+
     return (
         <div className="signUpSquare">
             <h1>Login</h1>
@@ -38,7 +47,7 @@ export default function LoginSquare(){
             <input value={email} type="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder="Enter Email"/>
             
             <label htmlFor="password">Password</label>
-            <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Create a Password"/>
+            <input onKeyDown={handleKey} value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Create a Password"/>
 
             <button onClick={login} className='button-28'>Login </button>
 

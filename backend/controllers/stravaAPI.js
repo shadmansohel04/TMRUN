@@ -462,7 +462,7 @@ const updateScores = async(id)=>{
             improve: improve,
             calories: calories
         }
-        stravaPerson.save()
+        await stravaPerson.save()
 
     } catch (error) {
         console.log("update failed")

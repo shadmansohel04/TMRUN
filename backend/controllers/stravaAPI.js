@@ -25,7 +25,8 @@ const mealBurn = async (userID)=>{
 
 
     } catch (error) {
-        throw new Error (error)    
+        console.log(error)
+        return NaN
     }
 }
 
@@ -54,7 +55,8 @@ const improver = async (userID) =>{
         return (((recentPace - FirstRun)/ FirstRun)*100).toFixed(1)
 
     } catch (error) {
-        throw new Error (error)    
+        console.log(error)
+        return NaN
     }
 }
 
@@ -78,7 +80,8 @@ const momentum = async (userID) =>{
 
         return sum.toFixed(1)
     } catch (error) {
-        throw new Error (error)    
+        console.log(error)
+        return NaN
     }
 }
 
@@ -113,7 +116,8 @@ const pacer = async (userID) =>{
         return sum.toFixed(1)
 
     } catch (error) {  
-        throw new Error (error)    
+        console.log(error)
+        return NaN
     }
 }
 
@@ -181,7 +185,12 @@ const timePusher = async (userID) =>{
         return score
 
     } catch (error) {
-        throw new Error (error)    
+        console.log(error)
+        const score = {
+            time: "unknown",
+            value: NaN
+        }
+        return score
     }
 }
 
@@ -208,7 +217,8 @@ const getAMorPMscore = async (userID) =>{
         return 0
 
     } catch (error) {
-        throw new Error (error)    
+        console.log(error)
+        return NaN
     }
 }
 
@@ -237,7 +247,7 @@ const getlastThreeRunsData = async (userID, accessToken) =>{
         userData.lastThreeRuns = lastRuns
         userData.save()
     } catch (error) {
-        throw new Error (error)    
+        console.log(error)
     }
 }
 
@@ -261,7 +271,8 @@ const highClimber = async (userID) =>{
         return avgElevation
         
     } catch (error) {
-        throw new Error (error)    
+        console.log(error)
+        return NaN
     }
 }
 
@@ -301,8 +312,8 @@ const CaptainConsistency = async (userID) =>{
         return numberOfRuns
 
     } catch (error) {
-        console.log("consistent failed")
-        throw new Error (error)    
+        console.log(error)
+        return NaN
     }
 }
 
@@ -350,7 +361,7 @@ const updateStrava = async (userID)=>{
         await updateScores(userID)
         return
     } catch (error) {
-        throw new Error (error)    
+        console.log(error)
     }
 }
 
@@ -374,7 +385,6 @@ const getRecentRuns = async(userID) =>{
         
     } catch (error) {
         console.log("recent failed")
-        throw new Error (error)    
     }
 }
 
@@ -415,7 +425,6 @@ const getAllScores = async (req, res) =>{
    
     } catch (error) {
         console.log("get failed")
-        throw new Error ('an error occured')    
     }
 }
 
@@ -466,7 +475,6 @@ const updateScores = async(id)=>{
 
     } catch (error) {
         console.log("update failed")
-        throw new Error (error)
     }
 }
 

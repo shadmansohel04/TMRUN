@@ -22,7 +22,7 @@ const time_20k = async (userID)=>{
         return parseFloat((sum/alldata.length).toFixed(1))
 
     } catch (error) {
-        console.log(error)
+        return NaN
     }
 }
 
@@ -48,7 +48,7 @@ const time_10k = async (userID)=>{
         return parseFloat((sum/alldata.length).toFixed(1))
 
     } catch (error) {
-        console.log(error)
+        return NaN
     }
 }
 
@@ -74,7 +74,7 @@ const time_5k = async (userID)=>{
         return parseFloat((sum/alldata.length).toFixed(1))
 
     } catch (error) {
-        console.log(error)
+        return NaN
     }
 }
 
@@ -100,7 +100,7 @@ const time_2k = async (userID)=>{
         return parseFloat((sum/alldata.length).toFixed(1))
 
     } catch (error) {
-        console.log(error)
+        return NaN
     }
 }
 
@@ -119,7 +119,12 @@ const getRegularScores = async (userID)=>{
         })
 
     } catch (error) {
-        console.log(error)
+        return({
+            time2k: NaN,
+            time5k: NaN,
+            time10k: NaN,
+            time20k: NaN
+        })
     }
 }
 

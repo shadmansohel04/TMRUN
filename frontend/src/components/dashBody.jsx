@@ -109,6 +109,7 @@ export default function UserDashBody() {
             <div className="leftUserDash">
                 <h1>Hey {name}!</h1>
                 <button onClick={toScores} id="buttonForUserDash" className="button-40">All Scores</button>
+                <a href="https://www.strava.com/dashboard">View on Strava</a>
             </div>
             <div className="rightUserDash">
                 <h2>Recent Runs</h2>

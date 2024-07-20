@@ -26,6 +26,9 @@
     margin-bottom: 20%;
 }
 
+.leftUserDash a{
+    font-weight: bold;
+}
 
 #buttonForUserDash{
     width: 50%;

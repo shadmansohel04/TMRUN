@@ -357,6 +357,13 @@ const updateStrava = async (userID)=>{
 
         let weight = weightResponse.data.weight
         const stravaData = await Strava.findOne({person: userID})
+        console.log(response.data)
+        console.log(response.data.length)
+
+        // let newData = response.data.map((each)=>{
+
+        // })
+
         stravaData.recentRuns = response.data
         stravaData.weight = weight
         await stravaData.save()

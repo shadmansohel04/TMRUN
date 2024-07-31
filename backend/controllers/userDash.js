@@ -36,6 +36,7 @@ const getUserInfo = async (req, res)=>{
         if(person.userId != req.params.id){
             return res.status(200).send({success: false, msg: "need to huhh"})
         }     
+        
         const userId = req.params.id   
         const stravaData = await getRecentRuns(userId)
         const user = await User.findById({_id: userId})

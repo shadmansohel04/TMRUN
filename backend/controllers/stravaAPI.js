@@ -242,6 +242,7 @@ const getlastThreeRunsData = async (userID, accessToken) =>{
                     access_token: accessToken
                 }
             })
+            console.log(response.data)
             lastRuns.push(response.data)
         }
         userData.lastThreeRuns = lastRuns

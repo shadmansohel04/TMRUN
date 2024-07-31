@@ -356,13 +356,11 @@ const updateStrava = async (userID)=>{
 
         let weight = weightResponse.data.weight
         const stravaData = await Strava.findOne({person: userID})
-        console.log(response.data)
 
         let newData = []
         
         response.data.map((each)=>{
             if(each.private == false){
-                console.log("onepushed")
                 newData.push(each)
             }
         })

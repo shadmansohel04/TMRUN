@@ -242,7 +242,6 @@ const getlastThreeRunsData = async (userID, accessToken) =>{
                     access_token: accessToken
                 }
             })
-            console.log(response.data.private)
             if(response.data.private == false){
                 lastRuns.push(response.data)
             }
@@ -358,11 +357,15 @@ const updateStrava = async (userID)=>{
         let weight = weightResponse.data.weight
         const stravaData = await Strava.findOne({person: userID})
         console.log(response.data)
-        console.log(response.data.length)
 
-        // let newData = response.data.map((each)=>{
-
-        // })
+        let newData = []
+        
+        response.data.map((each)=>{
+            if(each.private == false){
+                console.log("onepushed")
+                newData.push(each)
+            }
+        })
 
         stravaData.recentRuns = response.data
         stravaData.weight = weight

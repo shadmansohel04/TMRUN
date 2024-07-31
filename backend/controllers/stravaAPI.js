@@ -365,7 +365,7 @@ const updateStrava = async (userID)=>{
             }
         })
 
-        stravaData.recentRuns = response.data
+        stravaData.recentRuns = newData
         stravaData.weight = weight
         await stravaData.save()
         await getlastThreeRunsData(userID, access_token)

@@ -30,7 +30,7 @@ export default function(){
             if(response.data.success == false){
                 return
             }
-            if(response.data.elevationScore != NaN){
+            if(response.data.elevationScore != "NaN"){
                 setHighRiser(response.data.elevationScore)
             } 
             
@@ -55,7 +55,7 @@ export default function(){
                 setPacerScore(response.data.pacerScore) 
             }
             setShowSwitch(response.data.leaderMSG)
-            if(response.data.momentumScore != NaN){
+            if(response.data.momentumScore != "NaN"){
                 setMomentum(response.data.momentumScore)
             }
 
@@ -66,7 +66,7 @@ export default function(){
             if(response.data.improvement != null){
                 setImprover(response.data.improvement)
             }
-            if(response.data.calories != NaN){
+            if(response.data.calories != "NaN"){
                 setCalories(response.data.calories)
             }
         })

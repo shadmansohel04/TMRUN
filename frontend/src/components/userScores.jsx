@@ -51,6 +51,7 @@ export default function(){
             setPusherScore(response.data.timePusher.value)   
 
             if(response.data.pacerScore != NaN){
+                console.log("ehhh")
                 setPacerScore(response.data.pacerScore) 
             }
             setShowSwitch(response.data.leaderMSG)

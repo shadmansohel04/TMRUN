@@ -24,8 +24,8 @@ export default function aboutBody(){
             <div className='motivationBlurb topMargin'>
                 <div className='leftMotivationBlurb'>
                     <h1 className='aboutTitle'>RANKING</h1>
-                    <p>Our scores are nuanced and vary in criteria and distance. The criteria 
-                        ranges between speed, consistency and your route. We believe that running 
+                    <p>Our scores are nuanced and vary in criteria and distance. With a minimum distace of 2km,
+                        the criteria ranges between speed, consistency and your route. We believe that running 
                         metrics should be complicated and not bottled down to a single value. 
                         We host scores for 2km, 5km, 10km and 20k, with the option to join the leaderboards.
                          Ready to lace them up yet?

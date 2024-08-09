@@ -30,7 +30,10 @@ export default function(){
             if(response.data.success == false){
                 return
             }
-            setHighRiser(response.data.elevationScore)
+            if(response.data.elevationScore != NaN){
+                setHighRiser(response.data.elevationScore)
+            } 
+            
             setConsistencyScore(response.data.consistencyScore)
             if(response.data.AM_PM_score.time == "PM"){
                 setAMPM("Night Owl")
@@ -41,18 +44,30 @@ export default function(){
             else{
                 setAMPM("Equal Time Runner")
             }
-            setAMPMScore(response.data.AM_PM_score.score)    
-            setPusher(response.data.timePusher.time)    
+            setAMPMScore(response.data.AM_PM_score.score)  
+
+            setPusher(response.data.timePusher.time)   
+
             setPusherScore(response.data.timePusher.value)   
-            setPacerScore(response.data.pacerScore) 
+
+            if(response.data.pacerScore != NaN){
+                setPacerScore(response.data.pacerScore) 
+            }
             setShowSwitch(response.data.leaderMSG)
-            setMomentum(response.data.momentumScore)
+            if(response.data.momentumScore != NaN){
+                setMomentum(response.data.momentumScore)
+            }
+
             set2k(response.data.regularScores.time2k)
             set5k(response.data.regularScores.time5k)
             set10k(response.data.regularScores.time10k)
             set20k(response.data.regularScores.time20k)
-            setImprover(response.data.improvement)
-            setCalories(response.data.calories)
+            if(response.data.improvement != null){
+                setImprover(response.data.improvement)
+            }
+            if(response.data.calories != NaN){
+                setCalories(response.data.calories)
+            }
         })
     }, [])
 

@@ -54,7 +54,9 @@ export default function UserDashBody() {
               
             setRuns(newStrava)
             setLoading(false);
-            setPacer(response.data.scores.pacerScore)
+            if(response.data.scores.pacerScore != NaN){
+                setPacer(response.data.scores.pacerScore)
+            }
             setImprove(response.data.scores.improve)
             setTime(response.data.scores.consistencyScore)
         })

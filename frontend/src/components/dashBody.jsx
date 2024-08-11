@@ -54,11 +54,13 @@ export default function UserDashBody() {
               
             setRuns(newStrava)
             setLoading(false);
-            if(response.data.scores.pacerScore != NaN){
+            if(response.data.scores.pacerScore != "NaN"){
                 setPacer(response.data.scores.pacerScore)
             }
             setImprove(response.data.scores.improve)
-            setTime(response.data.scores.consistencyScore)
+            if(response.data.scores.consistencyScore != "0"){
+                setTime(response.data.scores.consistencyScore)
+            }
         })
         .catch((error) => {
             console.error('Error fetching user data:', error);

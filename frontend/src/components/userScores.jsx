@@ -32,7 +32,7 @@ export default function(){
             }
             if(response.data.elevationScore != "NaN"){
                 setHighRiser(response.data.elevationScore)
-            } 
+            }
             
             setConsistencyScore(response.data.consistencyScore)
             if(response.data.AM_PM_score.time == "PM"){
@@ -51,7 +51,6 @@ export default function(){
             setPusherScore(response.data.timePusher.value)   
 
             if(response.data.pacerScore != "NaN"){
-                console.log(response.data.pacerScore)
                 setPacerScore(response.data.pacerScore) 
             }
             setShowSwitch(response.data.leaderMSG)

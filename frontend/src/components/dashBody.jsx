@@ -58,7 +58,8 @@ export default function UserDashBody() {
                 setPacer(response.data.scores.pacerScore)
             }
             setImprove(response.data.scores.improve)
-            if(response.data.scores.consistencyScore != "0"){
+            if(response.data.scores.consistencyScore != "0.0"){
+                console.log("sss")
                 setTime(response.data.scores.consistencyScore)
             }
         })

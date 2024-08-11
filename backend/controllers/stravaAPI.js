@@ -16,7 +16,7 @@ const mealBurn = async (userID)=>{
         const size = lastThreeRuns.length
         
         lastThreeRuns = lastThreeRuns.filter((each) => {
-            return each.calories >= 500;
+            return each.calories >= 300;
         });        
         
 

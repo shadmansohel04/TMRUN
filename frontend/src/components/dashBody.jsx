@@ -59,7 +59,6 @@ export default function UserDashBody() {
             }
             setImprove(response.data.scores.improve)
             if(response.data.scores.consistencyScore != "0.0"){
-                console.log("sss")
                 setTime(response.data.scores.consistencyScore)
             }
         })

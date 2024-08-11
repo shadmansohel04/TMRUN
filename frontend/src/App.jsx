@@ -8,6 +8,7 @@ import UserDashPage from './pages/userDash';
 import LeaderBoardsPage from './pages/leaderboards';
 import AllScoresPage from './pages/allScoresPage';
 import ContactPage from './pages/contactPage';
+import OneScorePage from './pages/oneScore';
 
 import './App.css';
 
@@ -24,7 +25,7 @@ function App() {
         <Route path='/userdash/:userId/scores' element = { <AllScoresPage /> } />
         <Route path='/userdash/leader' element= { <LeaderBoardsPage /> }/>
         <Route path='/contact' element= { <ContactPage /> }/>
-
+        <Route path="/userdash/scorePage" element = { <OneScorePage /> }/>
 
       </Routes>
     </BrowserRouter>

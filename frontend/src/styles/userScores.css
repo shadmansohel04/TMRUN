@@ -39,23 +39,37 @@
 .EachScore{
     display: flex;
     flex-direction: column;
-    width: 44%;
+    width: 48%;
     background-color: transparent;
     padding: 2%;
     background-color: rgb(0, 0, 0, 0.2);
     border: solid 5px white;
     border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.EachScore:hover{
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .EachScore h2{
     margin-bottom: 5%;
     font-weight: 100;
     font-size: 3rem;
+    text-align: left;
 }
 
 .EachScore h4{
     margin-bottom: 3%;
     font-size: 4rem;
+}
+
+.EachScore p{
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: left;
 }
 
 
@@ -141,7 +155,7 @@
 
   .horizontalScores{
     display: flex;
-    width: 90%;
+    width: 100%;
     text-align: left;
     flex-direction: column;
     align-items: center;

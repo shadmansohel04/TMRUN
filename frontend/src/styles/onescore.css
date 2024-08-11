@@ -1,0 +1,53 @@
+.oneScoreCon{
+    width: 80%;
+    display: flex;
+    align-self: center;
+    margin-top: 4%;
+    margin-bottom: 50vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftOneScore{
+    width: 40%;
+}
+
+.leftOneScore h1{
+    font-size: 3rem;
+    margin-bottom: 1%;
+    font-weight: 300;
+    font-family: "Playwrite AU NSW", cursive;
+}
+
+.leftOneScore h2{
+    font-size: 7rem;
+    font-family: "Playwrite AU NSW", cursive;
+}
+
+.oneScoreCon p{
+    width: 50%;
+    font-size: 1.1rem;
+    font-weight: 100;
+    text-align: left;
+}
+
+@media (max-width: 768px){
+    .oneScoreCon{
+        flex-direction: column;
+        margin-bottom: 20vh;
+    }
+
+    .leftOneScore{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .leftOneScore h2{
+        width: 100%;
+        font-size: 5rem;
+    }
+
+    .oneScoreCon p{
+        width: 100%;
+    }
+}

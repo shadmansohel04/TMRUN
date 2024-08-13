@@ -34,7 +34,7 @@
 @media (max-width: 768px){
     .oneScoreCon{
         flex-direction: column;
-        margin-bottom: 20vh;
+        margin-bottom: 10vh;
     }
 
     .leftOneScore{
@@ -42,12 +42,17 @@
         margin-bottom: 10%;
     }
 
+    .leftOneScore h1{
+        font-size: 3rem;
+    }
+
     .leftOneScore h2{
         width: 100%;
-        font-size: 5rem;
+        font-size: 5.3rem;
     }
 
     .oneScoreCon p{
         width: 100%;
+        font-size: 1.1rem;
     }
 }

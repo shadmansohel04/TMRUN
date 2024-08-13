@@ -61,9 +61,27 @@
 @media (max-width: 768px){
 
     .signUpSquare{
-        margin-top: 5%;
+        margin-top: 24%;
         width: 60%;
         margin-bottom: 40%;
+    }
+
+    .signUpSquare h1{
+        margin-top: 5%;
+        font-size: 2rem;
+    }
+
+    .signUpSquare label{
+        font-size: 1rem;
+    }
+
+    .signUpSquare input{
+        font-size: 1rem;
+        margin-bottom: 7%;
+    }
+
+    .signUpSquare button{
+        font-size: 1.2rem;
     }
 
 }

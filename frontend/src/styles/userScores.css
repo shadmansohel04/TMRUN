@@ -210,5 +210,8 @@
     margin-bottom: 10%;
   }
 
+  .EachScore p{
+    font-size: 1.1rem;
+  }
 
 }

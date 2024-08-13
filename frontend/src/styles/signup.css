@@ -5,7 +5,7 @@
     align-self: center;
     text-align: left;
     background-color: transparent;
-    margin-top: 3%;
+    margin-top: 6%;
     margin-bottom: 5%;
     padding-top: 3%;
     padding-left: 5%;
@@ -18,12 +18,13 @@
 
 .signUpSquare h1{
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5vw;
     margin-bottom: 10%;
 }
 
 .signUpSquare label{
     margin-bottom: 2%;
+    font-size: 1.4vw;
 }
 
 .signUpSquare input{
@@ -33,6 +34,7 @@
     border: solid rgb(232,188,68);
     border-radius: 10px;
     color: white;
+    font-size: 1.2vw;
 }
 
 .signUpSquare input::placeholder{
@@ -52,7 +54,7 @@
 
 .errorMessage{
     text-align: center;
-    font-size: 12px;
+    font-size: 1.3vw;
     color: red;
 }
 

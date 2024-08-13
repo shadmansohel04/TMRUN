@@ -14,7 +14,7 @@
 
 
 #TitlesInScores{
-  font-size: 5rem;
+  font-size: 6.4vw;
   margin-bottom: 3%;
   text-align: left;
   width: fit-content;
@@ -57,17 +57,17 @@
 .EachScore h2{
     margin-bottom: 5%;
     font-weight: 100;
-    font-size: 3rem;
+    font-size: 3.6vw;
     text-align: left;
 }
 
 .EachScore h4{
     margin-bottom: 3%;
-    font-size: 4rem;
+    font-size: 6vw;
 }
 
 .EachScore p{
-  font-size: 1rem;
+  font-size: 1.4vw;
   font-weight: 300;
   text-align: left;
 }
@@ -78,14 +78,14 @@
     width: 50%;
     align-self: center;
     height: 60px;
-    font-size: 2rem;
+    font-size: 2.4vw;
     background: transparent;
     border: none;
     position: relative;
     color: white;
     cursor: pointer;
     z-index: 1;
-    padding: 10px 20px;
+    padding: 2% 4%;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -10,7 +10,7 @@
 }
 
 .leaderBoardContainer h1{
-    font-size: 4rem;
+    font-size: 5.2vw;
     text-align: left;
     margin-bottom: 4%;
 }
@@ -37,6 +37,7 @@
 
 .leaders h2{
     font-weight: 400;
+    font-size: 2.4vw;
     margin-bottom: 3%;
 }
 
@@ -51,6 +52,7 @@
     background-color: #f5f5f4;
     padding: 1.5%;
     font-weight: 500;
+    font-size: 1.3vw;
 
 }
 

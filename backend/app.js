@@ -13,14 +13,14 @@ const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
 // PRODUCTION
-app.use(cors({
-  origin:"https://tmrun-1.onrender.com"
-}))
+// app.use(cors({
+//   origin:"https://tmrun-1.onrender.com"
+// }))
 
 // DEV
-// app.use(cors({
-//   origin:"http://localhost:5173"
-// }))
+app.use(cors({
+  origin:"http://localhost:5173"
+}))
 
 app.use(express.json())
 

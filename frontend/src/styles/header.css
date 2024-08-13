@@ -37,7 +37,7 @@ ul{
 
 li{
     margin-right: 5%;
-    font-size: 1.25rem;
+    font-size: 1.5vw;
 }
 
 a{
@@ -48,7 +48,7 @@ a{
 .LOGO{
     font-weight: 800;
     margin-right: 10%;
-    font-size: 2rem;
+    font-size: 2.4vw;
     color: rgb(232,188,68);
 }
 
@@ -65,7 +65,7 @@ a{
   cursor: pointer;
   display: inline-block;
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 16px;
+  font-size: 1.4vw;
   font-weight: 600;
   line-height: normal;
   margin: 0;
@@ -160,6 +160,9 @@ a{
     justify-content: space-around;
   }
 
+  .LOGO{
+    font-size: 2rem;
+  }
 
   .dropper{
     display: inline;

@@ -32,7 +32,7 @@ export default function signUpSquare(){
 
     function checkEnter(event){
         if (event.key == "Enter"){
-            login()
+            signUp()
         }
     }
 

@@ -30,6 +30,11 @@ export default function LoginSquare(){
         })
     }
 
+    function checkEnter(event){
+        if (event.key === "Enter"){
+            login()
+        }
+    }
 
     return (
         <div className="signUpSquare">
@@ -39,7 +44,7 @@ export default function LoginSquare(){
             <input value={email} type="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder="Enter Email"/>
             
             <label htmlFor="password">Password</label>
-            <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Create a Password"/>
+            <input value={password} onKeyDown={(e) => {checkEnter(e)}} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Create a Password"/>
 
             <button onClick={login} className='button-28'>Login </button>
 

@@ -144,7 +144,7 @@ const getPacerArray = async ()=>{
             })
         )
 
-        allPeopleData = allPeopleData.filter(each => !Number.isNaN(each.scores))
+        allPeopleData = allPeopleData.filter(each => !isNaN(each.scores) && each.person !== null)
 
         allPeopleData.sort((a, b) => a.scores - b.scores);
 
@@ -169,9 +169,9 @@ const getLeaderArray = async (req, res) => {
             })
         )
 
-        allPeopleData.sort((a, b) => b.scores - a.scores);
+        allPeopleData = allPeopleData.filter(each => !isNaN(each.scores) && each.person !== null)
 
-        allPeopleData = allPeopleData.filter(each => !Number.isNaN(each.scores))
+        allPeopleData.sort((a, b) => b.scores - a.scores);
 
 
         const consistentLeader = await consistentLeaderArray()

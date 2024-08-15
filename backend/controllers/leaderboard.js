@@ -144,7 +144,7 @@ const getPacerArray = async ()=>{
             })
         )
 
-        allPeopleData = allPeopleData.filter(each => !isNaN(each.scores) && each.person !== null)
+        allPeopleData = allPeopleData.filter(each => !isNaN(each.score) && each.person !== null)
 
         allPeopleData.sort((a, b) => a.scores - b.scores);
 
@@ -169,7 +169,7 @@ const getLeaderArray = async (req, res) => {
             })
         )
 
-        allPeopleData = allPeopleData.filter(each => !isNaN(each.scores.elevationScore) && each.person !== null)
+        allPeopleData = allPeopleData.filter(each => !isNaN(each.scores) && each.person !== null)
 
         allPeopleData.sort((a, b) => b.scores - a.scores);
 

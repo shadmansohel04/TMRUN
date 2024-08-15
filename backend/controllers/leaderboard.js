@@ -117,9 +117,11 @@ const getMomentumArray = async()=>{
             })
         )
 
-        allPeopleData = allPeopleData.filter(each => !Number.isNaN(each.scores))
+        allPeopleData = allPeopleData.filter(each => !isNaN(each.score) && each.person !== null);
 
         allPeopleData.sort((a, b) => b.score - a.score);
+
+        console.log(allPeopleData)
 
         return allPeopleData
     } catch (error) {

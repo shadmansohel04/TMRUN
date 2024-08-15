@@ -164,15 +164,14 @@ const getLeaderArray = async (req, res) => {
                 const username = user ? user.username : null;
                 return {
                     person: username,
-                    scores: each.scores.elevationScore
+                    scores: parseFloat(each.scores.elevationScore)
                 };
             })
         )
 
-        allPeopleData = allPeopleData.filter(each => !isNaN(each.scores) && each.person !== null)
+        allPeopleData = allPeopleData.filter(each => !isNaN(each.scores.elevationScore) && each.person !== null)
 
         allPeopleData.sort((a, b) => b.scores - a.scores);
-
 
         const consistentLeader = await consistentLeaderArray()
         const pacerLeader = await getPacerArray()

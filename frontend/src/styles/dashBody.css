@@ -89,7 +89,7 @@
 
 
 .userBackground{
-    background-image: url('/background.jpg');
+    background-image: url('/background.svg');
     background-repeat: no-repeat;
     background-size: cover;
 }

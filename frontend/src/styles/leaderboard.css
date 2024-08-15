@@ -47,13 +47,24 @@
 
 .leaderItem h4{
     color: black;
-    width: 50%;
+    flex: 4;
     border: solid black 2px;
     background-color: #f5f5f4;
     padding: 1.5%;
     font-weight: 500;
     font-size: 1.3vw;
+}
 
+.shorterVal{
+    width: 10%;
+    color: black;
+    border: solid black 2px;
+    background-color: #f5f5f4;
+    padding: 1.5%;
+    font-weight: 500;
+    flex: 1;
+    font-size: 1.3vw;
+    text-align: center;
 }
 
 @media (max-width: 768px){
@@ -89,9 +100,10 @@
 
     .leaders h4{
         font-size: 1rem;
+    }    
+
+    .shorterVal{
+        font-size: 1rem;
     }
 
-
-
-    
 }

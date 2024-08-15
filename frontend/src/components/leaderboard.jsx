@@ -15,6 +15,7 @@ export default function EachLeaderboard() {
     function times_20k(){
         return times20k.map((each, index) => (
             <div key={index} className="leaderItem">
+                <h3 className="shorterVal">{parseInt(index) + 1}</h3>
                 <h4>{each.score != null? each.person: null}</h4>
                 <h4>{each.score != null? each.score: null}</h4>
             </div>
@@ -24,6 +25,7 @@ export default function EachLeaderboard() {
     function times_10k(){
         return times10k.map((each, index) => (
             <div key={index} className="leaderItem">
+                <h3 className="shorterVal">{parseInt(index) + 1}</h3>
                 <h4>{each.score != null? each.person: null}</h4>
                 <h4>{each.score != null? each.score: null}</h4>
             </div>
@@ -33,6 +35,7 @@ export default function EachLeaderboard() {
     function times_2k(){
         return times2k.map((each, index) => (
             <div key={index} className="leaderItem">
+                <h3 className="shorterVal">{parseInt(index) + 1}</h3>
                 <h4>{each.score != null? each.person: null}</h4>
                 <h4>{each.score != null? each.score: null}</h4>
             </div>
@@ -42,6 +45,7 @@ export default function EachLeaderboard() {
     function times_5k(){
         return times5k.map((each, index) => (
             <div key={index} className="leaderItem">
+                <h3 className="shorterVal">{parseInt(index) + 1}</h3>
                 <h4>{each.score != null? each.person: null}</h4>
                 <h4>{each.score != null? each.score: null}</h4>
             </div>
@@ -51,6 +55,7 @@ export default function EachLeaderboard() {
     function high_riser() {
         return highRiser.map((each, index) => (
             <div key={index} className="leaderItem">
+                <h3 className="shorterVal">{parseInt(index) + 1}</h3>
                 <h4>{each.scores != null? each.person: null}</h4>
                 <h4>{each.scores != null? each.scores: null}</h4>
             </div>
@@ -60,6 +65,7 @@ export default function EachLeaderboard() {
     function consistent_scores() {
         return consistentScore.map((each, index) => (
             <div key={index} className="leaderItem">
+                <h3 className="shorterVal">{parseInt(index) + 1}</h3>
                 <h4>{each.score != null? each.person: null}</h4>
                 <h4>{each.score != null? each.score: null}</h4>
             </div>
@@ -69,6 +75,7 @@ export default function EachLeaderboard() {
     function pacer_scores() {
         return pacerScores.map((each, index) => (
             <div key={index} className="leaderItem">
+                <h3 className="shorterVal">{parseInt(index) + 1}</h3>
                 <h4>{each.score != null? each.person: null}</h4>
                 <h4>{each.score != null? each.score: null}</h4>
             </div>
@@ -78,6 +85,7 @@ export default function EachLeaderboard() {
     function momentum_scores() {
         return momentumScore.map((each, index) => (
             <div key={index} className="leaderItem">
+                <h3 className="shorterVal">{parseInt(index) + 1}</h3>
                 <h4>{each.score != null? each.person: null}</h4>
                 <h4>{each.score != null? each.score: null}</h4>
             </div>

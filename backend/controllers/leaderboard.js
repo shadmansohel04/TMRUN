@@ -217,6 +217,9 @@ const consistentLeaderArray = async() =>{
 
         allPeopleData = allPeopleData.filter(each => !Number.isNaN(each.score))
 
+        allPeopleData.sort((a, b) => b.score - a.score);
+
+
         return allPeopleData
 
     } catch (error) {

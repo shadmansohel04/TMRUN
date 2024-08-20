@@ -1,0 +1,169 @@
+{
+  "_id": {
+    "$oid": "66b565fe8303f817f9c47791"
+  },
+  "person": {
+    "$oid": "66b565fe8303f817f9c47790"
+  },
+  "recentRuns": [
+    {
+      "resource_state": {
+        "$numberInt": "2"
+      },
+      "athlete": {
+        "id": {
+          "$numberInt": "138431042"
+        },
+        "resource_state": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "Evening Run",
+      "distance": {
+        "$numberDouble": "5251.9"
+      },
+      "moving_time": {
+        "$numberInt": "1743"
+      },
+      "elapsed_time": {
+        "$numberInt": "2323"
+      },
+      "total_elevation_gain": {
+        "$numberDouble": "53.4"
+      },
+      "type": "Run",
+      "sport_type": "Run",
+      "workout_type": {
+        "$numberInt": "0"
+      },
+      "id": {
+        "$numberDouble": "11939415501.0"
+      },
+      "start_date": "2024-07-20T23:17:17Z",
+      "start_date_local": "2024-07-20T19:17:17Z",
+      "timezone": "(GMT-05:00) America/Toronto",
+      "utc_offset": {
+        "$numberInt": "-14400"
+      },
+      "location_city": null,
+      "location_state": null,
+      "location_country": "Canada",
+      "achievement_count": {
+        "$numberInt": "0"
+      },
+      "kudos_count": {
+        "$numberInt": "0"
+      },
+      "comment_count": {
+        "$numberInt": "0"
+      },
+      "athlete_count": {
+        "$numberInt": "1"
+      },
+      "photo_count": {
+        "$numberInt": "0"
+      },
+      "map": {
+        "id": "a11939415501",
+        "summary_polyline": "e{`lGbt}cNq@NWHQJ_@DWJYBIBYAQD[?SDiBTKEcAJ]EUJo@@o@VU?a@Hs@Bu@XY@]?IDKAYFo@N[AEG~@G`@Fj@M\\DxA[j@Av@Sf@?FC`A@ZED?n@M\\BVKtBKd@KJ?b@KX?`A_@ZATKLAPIXB^MTBXIR@\\ET?XIRBRERAJCZAb@GJBp@EZFb@ALGZEVMFQAUMg@GeAQ}AUgADM@DC?DDcgCnJ@HFFBARXNFH?TQJUBQHWRaAN[PWJGj@SDEDMAa@JSB_AQw@UUIOc@e@EOEWBQG}@Bg@D_@PEPSPIDOBAb@f@NHJPJHZd@r@x@JP|AvAZTZd@^PDAZ^ZXD?PJH?FDJHF@b@T\\JJHn@Rj@TlATP@b@P`@F^?^Cb@@DAd@DBAf@?j@Bt@KhABDCVB^CZDLAPBTC\\Bn@LT?DAHD`@@LBJAZHp@F^JDA`@LH?RJRFLHZ@RBFDBAFBN?jA\\d@VVFJNBL?TDLLjADFDx@XhAIc@CEMy@AUEOGk@EMAYIk@IMYO[GIGE?KGa@ESKUCACu@GOKWGIGWCMIK?GC[C[I]GS@_@QI?[IK@IEQAMGKBEC]CM@UE}@FQCm@?O@KBq@Ag@D_@Ek@?UKs@E[BS?IFGCK?KCQ?UGOKMGYEGG[MQCW?KE_@GGIICWCOGOMOGWOc@KMM[OGG]IWSMEWSa@m@EAMQQCOGSS[SY_@e@i@[m@OK[a@c@a@ECGBUXCJE@GCEBOz@?PBJ",
+        "resource_state": {
+          "$numberInt": "2"
+        }
+      },
+      "trainer": false,
+      "commute": false,
+      "manual": false,
+      "private": false,
+      "visibility": "everyone",
+      "flagged": false,
+      "gear_id": null,
+      "start_latlng": [
+        {
+          "$numberDouble": "44.080187883228064"
+        },
+        {
+          "$numberDouble": "-79.45534452795982"
+        }
+      ],
+      "end_latlng": [
+        {
+          "$numberDouble": "44.10169861279428"
+        },
+        {
+          "$numberDouble": "-79.45558642968535"
+        }
+      ],
+      "average_speed": {
+        "$numberDouble": "3.013"
+      },
+      "max_speed": {
+        "$numberDouble": "4.458"
+      },
+      "has_heartrate": false,
+      "heartrate_opt_out": false,
+      "display_hide_heartrate_option": false,
+      "elev_high": {
+        "$numberDouble": "256.3"
+      },
+      "elev_low": {
+        "$numberDouble": "230.3"
+      },
+      "upload_id": {
+        "$numberDouble": "12730154156.0"
+      },
+      "upload_id_str": "12730154156",
+      "external_id": "C1920548-B058-4593-BE85-849D50F091E3-activity.fit",
+      "from_accepted_tag": false,
+      "pr_count": {
+        "$numberInt": "0"
+      },
+      "total_photo_count": {
+        "$numberInt": "0"
+      },
+      "has_kudoed": false
+    }
+  ],
+  "stravaID": "140396699",
+  "lastThreeRuns": [],
+  "leaderboard": true,
+  "weight": null,
+  "__v": {
+    "$numberInt": "0"
+  },
+  "scores": {
+    "elevationScore": "NaN",
+    "timePusherScore": {
+      "time": "Day To Day Pusher",
+      "value": {
+        "$numberInt": "50"
+      }
+    },
+    "consistencyScore": "0.0",
+    "amORpmScore": {
+      "time": "EVEN",
+      "score": {
+        "$numberInt": "0"
+      }
+    },
+    "pacerScore": "NaN",
+    "momentumScore": "NaN",
+    "regularScores": {
+      "time2k": {
+        "$numberDouble": "NaN"
+      },
+      "time5k": {
+        "$numberDouble": "NaN"
+      },
+      "time10k": {
+        "$numberDouble": "NaN"
+      },
+      "time20k": {
+        "$numberDouble": "NaN"
+      }
+    },
+    "improve": {
+      "$numberDouble": "NaN"
+    },
+    "calories": "NaN"
+  }
+}

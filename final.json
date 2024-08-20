@@ -1,0 +1,40 @@
+{
+  "_id": "66b565fe8303f817f9c47791",
+  "person": "66b565fe8303f817f9c47790",
+  "scores": {
+    "elevationScore": "NaN",
+    "timePusherScore": {
+      "time": "Day To Day Pusher",
+      "value": {
+        "$numberInt": "50"
+      }
+    },
+    "consistencyScore": "0.0",
+    "amORpmScore": {
+      "time": "EVEN",
+      "score": {
+        "$numberInt": "0"
+      }
+    },
+    "pacerScore": "NaN",
+    "momentumScore": "NaN",
+    "regularScores": {
+      "time2k": {
+        "$numberDouble": "NaN"
+      },
+      "time5k": {
+        "$numberDouble": "NaN"
+      },
+      "time10k": {
+        "$numberDouble": "NaN"
+      },
+      "time20k": {
+        "$numberDouble": "NaN"
+      }
+    },
+    "improve": {
+      "$numberDouble": "NaN"
+    },
+    "calories": "NaN"
+  }
+}

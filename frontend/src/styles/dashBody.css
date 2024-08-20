@@ -13,6 +13,7 @@
 }
 
 .leftUserDash{
+    overflow: hidden;
     width: 50%;
     height: 100%;
     display: flex;

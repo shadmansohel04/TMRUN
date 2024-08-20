@@ -37,7 +37,7 @@ const signUp = async (req, res) => {
         return res.status(200).send({success: false, msg: 'Please enter required information'});
     }
     
-    if(!email.endsWith('@torontomu.ca') && !email.endsWith('@gmail.com') && !email.endsWith('@hotmail.com')){
+    if(!email.endsWith('@torontomu.ca') && !email.endsWith("@hotmail.com") && !email.endsWith('@gmail.com') && !email.endsWith('@hotmail.com')){
         return res.status(200).send({success: false, msg: 'Please enter a valid email'});
     }
 

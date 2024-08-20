@@ -4,8 +4,8 @@ require('dotenv').config(); // Import dotenv to read environment variables from 
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "shadman2354@gmail.com",
-    pass: "vvgy nojg myzo yydm",
+    user: "tmrun.mail.co@gmail.com",
+    pass: "hgka paik giwk wsnk",
   },
 });
 

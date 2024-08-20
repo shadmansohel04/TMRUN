@@ -14,7 +14,7 @@ const sendContact = async(req, res)=>{
         const {email, subject, message} = req.body
     
         transporter.sendMail({
-            from: 'shadman2354@gmail.com',
+            from: 'tmrun.mail.co@@gmail.com',
             to: 'shadman.sohel04@gmail.com',
             subject: subject,
             text: email + " \n" + message

@@ -32,13 +32,13 @@ function DashHeader() {
                 <button className='dropper' onClick={() => setOpen(prev => !prev)}>☰</button>
                 
                 <ul className={ openOrClose? 'dropdown showNAV': 'dropdown'}>
-                    <li><a href={`/userdash/leader`}>Leaderboards</a></li>
-                    <li><a href={`/userdash/${userId}/scores`}>My Stats</a></li>
-                    <li><a href={"/userdash/" + userId}>Dash</a></li>
+                    <li className={ openOrClose? 'showText': 'hideText'}><a href={`/userdash/leader`}>Leaderboards</a></li>
+                    <li className={ openOrClose? 'showText': 'hideText'}><a href={`/userdash/${userId}/scores`}>My Stats</a></li>
+                    <li className={ openOrClose? 'showText': 'hideText'}><a href={"/userdash/" + userId}>Dash</a></li>
                     <button onClick={logout} className='button-28 keepFit'>Logout</button>
                 </ul>                
                 <button onClick={logout} className='button-28 hideThis'>Logout</button>
-                
+
             </div>
         </header>
     );

@@ -34,16 +34,10 @@ function Header() {
             </div>
             <div className='rightSide'>
                 <button className='dropper' onClick={() => setOpen(prev => !prev)}>☰</button>
-                <ul className={ openOrClose? 'dropdown fade-transition hidden': 'dropdown sizing fade-transition'}>
-
-                    {openOrClose ? (
-                        <>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href={theurl}>Login</a></li>
-                        </>
-                    ) : null}
-
+                <ul className={ openOrClose? 'dropdown showNAV': 'dropdown'}>
+                    <li className={ openOrClose? 'showText': 'hideText'}><a href="/about">About</a></li>
+                    <li className={ openOrClose? 'showText': 'hideText'}><a href="/contact">Contact</a></li>
+                    <li className={ openOrClose? 'showText': 'hideText'}><a href={theurl}>Login</a></li>
                 </ul>                
                 <button onClick={login} className='button-28 hideThis'>Login</button>
             </div>

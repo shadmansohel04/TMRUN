@@ -100,10 +100,7 @@ a{
 }
 
 .firstlogo{
-  height: 0;
-  overflow: hidden;
-  display: flex;
-  transition: all 0.5s ease-in-out;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -134,7 +131,7 @@ a{
   }
 
   .firstlogo{
-    height: fit-content;    
+    display: flex;
   }
 
   .hideThis{

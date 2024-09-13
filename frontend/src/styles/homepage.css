@@ -4,7 +4,7 @@
     padding-top: 7%;
     color: white;
     margin: 0;
-    height: 70vh;
+    min-height: 70vh;
     transition: all 0.7s ease-in-out;
     justify-content: space-around;
 }

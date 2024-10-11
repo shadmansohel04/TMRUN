@@ -17,7 +17,7 @@ function Header() {
     }, [personID]);
 
     function login() {
-        navigate('/login');
+        navigate(`${theurl}`);
     }
 
     return (

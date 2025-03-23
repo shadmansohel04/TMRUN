@@ -9,7 +9,7 @@ export default function Footer(){
                 <a href="/" className='LOGO'>TMRUN</a>
                 <img src={powered} className='powered' alt="powered by strava" />
             </div>
-            <h3>created by <a href='https://shadmansohel04.github.io/Resume/' className='shadmanSohel'>Shadman Sohel</a> </h3>
+            <h3>created by <a href='https://personalwebsite-fytr.onrender.com/' className='shadmanSohel'>Shadman Sohel</a> </h3>
         </footer>
     )
 }

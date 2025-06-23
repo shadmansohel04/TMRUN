@@ -39,6 +39,7 @@ const pingWebsite = async () => {
     const response = await axios.get('https://rateto-backend.onrender.com/api/data?address=46.91310139948322+9.822978973388674&schoolChoice=private');
     const response2 = await axios.get('https://leetbotbackend.onrender.com/gettheScores');
     console.log(`Ping successful: ${response.status}`);
+    console.log(`Ping2 successful: ${response2.status}`);
   } catch (error) {
     console.error(`Ping failed: ${error.message}`);
   }

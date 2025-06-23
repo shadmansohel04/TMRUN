@@ -4,6 +4,8 @@ const cors = require('cors')
 const mainRouter = require('./routes/main')
 const userRouter = require('./routes/user')
 const {checkAuthorization} = require('./middleware/auth')
+const axios = require('axios');
+
 
 const express = require('express');
 const app = express();
@@ -32,6 +34,17 @@ app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 3000;
 
+const pingWebsite = async () => {
+  try {
+    const response = await axios.get('https://rateto-backend.onrender.com/api/data?address=46.91310139948322+9.822978973388674&schoolChoice=private');
+    const response2 = await axios.get('https://leetbotbackend.onrender.com/gettheScores');
+    console.log(`Ping successful: ${response.status}`);
+  } catch (error) {
+    console.error(`Ping failed: ${error.message}`);
+  }
+};
+
+
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI)
@@ -44,3 +57,5 @@ const start = async () => {
 };
 
 start();
+
+setInterval(pingWebsite, 120000);

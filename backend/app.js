@@ -15,9 +15,7 @@ const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
 // PRODUCTION
-app.use(cors({
-  origin:"https://tmrun-h224.onrender.com"
-}))
+app.use(cors())
 
 // DEV
 // app.use(cors({

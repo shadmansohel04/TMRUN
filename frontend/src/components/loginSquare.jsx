@@ -14,7 +14,7 @@ export default function LoginSquare(){
     const [errormsg, setMsg] = useState('')
 
     function login(){
-        axios.post(`${import.meta.env.VITE_HOMEURL}/home/login`, {
+        axios.post(`${import.meta.env.VITE_HOMEURL}home/login`, {
             email: email,
             password: password
         }).then((response)=>{

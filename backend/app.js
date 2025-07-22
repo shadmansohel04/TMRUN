@@ -16,7 +16,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 
 // PRODUCTION
 app.use(cors({
-  origin:"https://tmrun-1.onrender.com"
+  origin:"https://tmrun-h224.onrender.com"
 }))
 
 // DEV

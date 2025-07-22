@@ -34,7 +34,7 @@ export default function UserDashBody() {
     }
 
     useEffect(() => {
-        axios.get(`https://tmrun.onrender.com/userdash/home/${userId}`, {
+        axios.get(`${import.meta.env.VITE_HOMEURL}/userdash/home/${userId}`, {
             headers: {
                 Authorization: localStorage.getItem('token')
             }

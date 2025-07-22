@@ -93,7 +93,7 @@ export default function EachLeaderboard() {
     }
 
     useEffect(() => {
-        axios.get(`https://tmrun.onrender.com/userdash/leader`, {
+        axios.get(`${import.meta.env.VITE_HOMEURL}/userdash/leader`, {
             headers: {
                 Authorization: localStorage.getItem('token')
             }

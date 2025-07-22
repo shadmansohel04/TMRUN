@@ -23,7 +23,7 @@ export default function(){
     const [calories, setCalories] = useState('')
 
     useEffect(()=>{
-        axios.get(`https://tmrun.onrender.com/userdash/home/${userId}/scores`, {
+        axios.get(`${import.meta.env.VITE_HOMEURL}/userdash/home/${userId}/scores`, {
             headers:{
                 Authorization: localStorage.getItem('token')
             }
@@ -73,7 +73,7 @@ export default function(){
     }, [])
 
     function switchLeader(){
-        axios.post("https://tmrun.onrender.com/userdash/home/switchLeader", 
+        axios.post(`${import.meta.env.VITE_HOMEURL}/userdash/home/switchLeader`, 
             {
                 userId: userId,
                 newLeader: showSwitch

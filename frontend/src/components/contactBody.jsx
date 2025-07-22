@@ -8,7 +8,7 @@ export default function contactBody(){
     const [message, setMessage] = useState('')
 
     function sendEmail(){
-        axios.post("https://tmrun.onrender.com/home/contact", {
+        axios.post(`${import.meta.env.VITE_HOMEURL}/home/contact`, {
             email: email,
             subject: subject,
             message: message

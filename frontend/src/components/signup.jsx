@@ -14,7 +14,7 @@ export default function signUpSquare(){
     const [errormsg, setMsg] = useState('')
 
     function signUp(){
-        axios.post('https://tmrun.onrender.com/home/sign_up',{
+        axios.post(`${import.meta.env.VITE_HOMEURL}/home/sign_up`,{
             username,
             password,
             email

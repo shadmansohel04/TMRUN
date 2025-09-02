@@ -48,7 +48,7 @@ const pingWebsite = async () => {
         let response
         if(each.method == "GET"){
           response = await axios.get(each.url);
-          // console.log(`Success: ${each.url}: ${response.status}`);
+          console.log(`Success: ${each.url}: ${response.status}`);
         }
         else if (each.method == "POST"){
           response = await axios.post(each.url, each.body);

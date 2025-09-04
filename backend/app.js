@@ -35,7 +35,7 @@ const port = process.env.PORT || 3000;
 const webs = [
   {url:'https://rateto-backend.onrender.com/api/data?address=46.91310139948322+9.822978973388674&schoolChoice=private', method: "GET"}, 
   {url:'https://livechatproject-410t.onrender.com/gettheScores', method: "GET"},
-  {url:'https://hackthe6repo-ch8f.onrender.com/home/getRecipes', method: "GET"},
+  {url:'https://hackthe6repo-ch8f.onrender.com/home/forSpinUp', method: "GET"},
   {url:'https://tmrun-h224.onrender.com/home/login', method:"POST", body:{email: "somethingSilly@gmail.com", password:"wouldnt you like to know"}},
   {url: 'https://foodskitest.onrender.com/recipe/ParseRecipe', method: "POST", body: {Recipe: "Mix in the avocado with the milk"}},
   {url:"https://streakms-jni8.onrender.com/schedule/", method: "GET"}

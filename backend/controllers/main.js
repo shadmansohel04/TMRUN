@@ -10,6 +10,8 @@ const aboutGet = async (req, res)=>{
 }
 
 const sendContact = async(req, res)=>{
+        res.status(200).send({success: true})
+
     try {
         const {email, subject, message} = req.body
     

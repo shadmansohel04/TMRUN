@@ -15,6 +15,10 @@ const sendContact = async(req, res)=>{
 
         const ip = req.ip || "Bum Bum"
         let location
+        if (ip.startsWith("::ffff:")) {
+            ip = ip.replace("::ffff:", "");
+        }
+
         try {
             const res = await fetch(`https://ipapi.co/${ip}/json/`);
             const data = await res.text();

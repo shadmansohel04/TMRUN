@@ -1,5 +1,6 @@
 const CustomAPIError = require('../errors/custom-error')
 const transporter = require('../models/mailer')
+const axios = require("axios")
 
 const homeGet = async(req, res)=>{
     res.status(200).json({msg:"on the home page"})
@@ -11,7 +12,7 @@ const aboutGet = async (req, res)=>{
 
 const sendContact = async (req, res) => {
   try {
-    const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.ip;
+    const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket.remoteAddress;
 
     const location = await axios.get(`https://ipapi.co/${ip}/json/`)
       .then(r => r.data)
@@ -52,7 +53,7 @@ Location: ${location ? JSON.stringify(location, null, 2) : "Unavailable"}
     console.log(error)
     res.status(200).send({ 
         success: false, 
-        error: error 
+        error: error
     });
   }
 };

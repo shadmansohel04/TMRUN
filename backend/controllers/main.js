@@ -9,27 +9,50 @@ const aboutGet = async (req, res)=>{
     res.status(200).send('yayayaya')
 }
 
-const sendContact = async(req, res)=>{
-    try {
-        const {email, subject, message} = req.body
-    
-        transporter.sendMail({
-            from: 'tmrun.mail.co@gmail.com',
-            to: 'shadman.sohel04@gmail.com',
-            subject: subject,
-            text: email + " \n" + message
-        }, (error, info) => {
-            if (error) {
-                return next(new CustomAPIError(400, 'Proper email not given'));
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
-        })
-        res.status(200).send({success: true})
-    } catch (error) {
-        res.status(200).send({success: false})
-    }
-}
+const sendContact = async (req, res) => {
+  try {
+    const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.ip;
+
+    const location = await axios.get(`https://ipapi.co/${ip}/json/`)
+      .then(r => r.data)
+      .catch(() => null);
+
+    await transporter.sendMail({
+      from: req.body.email,
+      to: process.env.CONTACT_EMAIL,
+      subject: "New Contact Form Submission",
+      text: `
+Name: ${req.body.name}
+Email: ${req.body.email}
+Message: ${req.body.message}
+
+---- IP INFORMATION ----
+IP Address: ${ip}
+Location: ${location ? JSON.stringify(location, null, 2) : "Unavailable"}
+      `,
+      html: `
+        <p><strong>Name:</strong> ${req.body.name}</p>
+        <p><strong>Email:</strong> ${req.body.email}</p>
+        <p><strong>Message:</strong><br>${req.body.message}</p>
+
+        <hr>
+        <h3>IP Information</h3>
+        <p><strong>IP Address:</strong> ${ip}</p>
+        <p><strong>Location:</strong></p>
+        <pre>${location ? JSON.stringify(location, null, 2) : "Unavailable"}</pre>
+      `
+    });
+
+    res.status(200).send({
+      success: true,
+      ip,
+      location
+    });
+  } catch (error) {
+    res.status(200).send({ success: false });
+  }
+};
+
 
 module.exports = {
     homeGet,

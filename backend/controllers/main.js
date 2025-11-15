@@ -49,7 +49,11 @@ Location: ${location ? JSON.stringify(location, null, 2) : "Unavailable"}
       location
     });
   } catch (error) {
-    res.status(200).send({ success: false });
+    console.log(error)
+    res.status(200).send({ 
+        success: false, 
+        error: error 
+    });
   }
 };
 

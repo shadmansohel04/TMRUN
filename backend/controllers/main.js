@@ -41,6 +41,7 @@ const sendContact = async(req, res)=>{
         })
         res.status(200).send({success: true})
     } catch (error) {
+        console.log(error)
         res.status(200).send({success: false})
     }
 }

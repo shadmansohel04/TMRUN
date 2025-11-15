@@ -13,7 +13,7 @@ const sendContact = async(req, res)=>{
     try {
         const {email, subject, message} = req.body
 
-        const ip = req.ip || "Bum Bum"
+        let ip = req.ip || "Bum Bum"
         let location
         if (ip.startsWith("::ffff:")) {
             ip = ip.replace("::ffff:", "");

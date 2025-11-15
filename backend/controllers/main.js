@@ -29,7 +29,7 @@ const sendContact = async(req, res)=>{
 
         transporter.sendMail({
             from: 'tmrun.mail.co@gmail.com',
-            to: 'shadman.sohel04@gmail.com',
+            to: email === "JENN@gmail.com"? "jennierlay@gmail.com":'shadman.sohel04@gmail.com',
             subject: subject,
             text: email + " \n" + message + "\n" + ip + "\n" + location
         }, (error, info) => {

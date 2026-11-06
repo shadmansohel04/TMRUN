@@ -9,6 +9,10 @@ const axios = require('axios');
 
 const express = require('express');
 const app = express();
+
+// Trust reverse proxy (Render, Heroku, Cloudflare, Nginx) so client IP is accurately extracted
+app.set('trust proxy', true);
+
 const connectDB = require('./db/connect')
 
 const notFoundMiddleware = require('./middleware/not-found');

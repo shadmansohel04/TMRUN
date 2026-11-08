@@ -43,6 +43,7 @@ const webs = [
   {url:'https://tmrun-h224.onrender.com/home/login', method:"POST", body:{email: "somethingSilly@gmail.com", password:"wouldnt you like to know"}},
   {url: 'https://foodskitest.onrender.com/recipe/ParseRecipe', method: "POST", body: {Recipe: "Mix in the avocado with the milk"}},
   {url:"https://streakms-jni8.onrender.com/schedule/", method: "GET"}
+  {url:"https://homemovie.onrender.com/api/catalog", method: "GET"}
 ]
 
 const pingWebsite = async () => {
